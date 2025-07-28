@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Menu</title>
+
+    <!-- css bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- font-awesome  -->
+    <link rel="stylesheet" href="font-awesome/css/all.min.css">
+    
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="flatpickr/flatpickr.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- editor  -->
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/42.0.2/ckeditor5.css" />
+
+    <script type="importmap">
+        {
+            "imports": {
+                "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/42.0.2/ckeditor5.js",
+                "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/42.0.2/"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- nav start  -->
+    <nav class="navbar navbar-expand-md sticky-top shadow-sm" id="nav">
+        <div class="container-fluid">
+            <a href="#" class="text-decoration-none">
+                <img src="image/photo_2025-02-03_22-42-06.jpg" alt="" id="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="bg-transparent border-0 w-100 text-end" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav m-auto" id="nav-order">
+                        <li class="nav-item">
+                            <a class="nav-link" href="online-order.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="orders.html">Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="" id="nav-profile">
+                        <a href="profile.html" class="btn border-0" id="online-profile">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <button type="button" id="history-mobile" class="position-relative history-btn me-2">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                        1
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end  -->
+
+
+    <!--online menu start  -->
+    <section class="container-fluid mt-3">
+        <div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
+            <div>
+                <form action="" id="search-table">
+                    <div class="group">
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                        <input placeholder="What are you looking for?" name="search_key" value="" type="search" class="input">
+                    </div>
+                </form>
+            </div>
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
+                <button type="button" id="history-lap" class="position-relative history-btn">
+                    <i class="fa-solid fa-clock-rotate-left me-2"></i>History
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                        1
+                    </span>
+                </button>
+                <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h6 class="offcanvas-title" id="offcanvasRightLabel">Order History (1)</h6>
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" style="padding-bottom: 50px;">
+                        <div class="order-history-content mb-5">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <h6>Order No</h6>
+                                    <span>#12345</span>
+                                </div>
+                                <div>
+                                    <div class="d-flex justify-content-end">
+                                        <p class="bg-warning px-1 text-dark">Pending</p>
+                                    </div>
+                                    <span>May 27, 2025</span>
+                                </div>
+                            </div>
+                            <div>
+                                <ul class="pt-2">
+                                    <li>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span>1x Cheese Burger</span>
+                                            <span class="pe-3">5,000</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span>3x Fish Fried</span>
+                                            <span class="pe-3">15,000</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span>4x Cappuccino</span>
+                                            <span class="pe-3">20,000</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="border-top px-3">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <label for="">Subtotal</label>
+                                        <label>40,000</label>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <label for="">Delivery</label>
+                                        <label>3,500</label>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between border-top pt-1">
+                                        <label for="">Total(MMK)</label>
+                                        <label class="fw-bold">43,500</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-history-content mb-5">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <h6>Order No</h6>
+                                    <span>#12345</span>
+                                </div>
+                                <div>
+                                    <div class="d-flex justify-content-end">
+                                        <p class="bg-info px-1 text-dark">Ordered</p>
+                                    </div>
+                                    <span>May 27, 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-history-content mb-5">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <h6>Order No</h6>
+                                    <span>#12345</span>
+                                </div>
+                                <div>
+                                    <div class="d-flex justify-content-end">
+                                        <p class="bg-success-subtle px-1 text-dark">Out For Delivery</p>
+                                    </div>
+                                    <span>May 27, 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-history-content mb-5">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <h6>Order No</h6>
+                                    <span>#12345</span>
+                                </div>
+                                <div>
+                                    <div class="d-flex justify-content-end">
+                                        <p class="bg-success px-1">Delivered</p>
+                                    </div>
+                                    <span>May 27, 2025</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mx-auto text-secondary my-5">
+                            <i class="fa-regular fa-face-frown-open fs-5"></i>
+                            <p class="mt-2">You haven't placed any orders yet.</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="dropdown py-2 ms-4 online-btns-web">
+                    <button class="dropdown-toggle px-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        All
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="">All</a></li>
+                        <li><a class="dropdown-item" href="">Appetizer</a></li>
+                        <li><a class="dropdown-item" href="">Sweets</a></li>
+                        <li><a class="dropdown-item" href="">Soda</a></li>
+                        <li><a class="dropdown-item" href="">All</a></li>
+                        <li><a class="dropdown-item" href="">Appetizer</a></li>
+                        <li><a class="dropdown-item" href="">Sweets</a></li>
+                        <li><a class="dropdown-item" href="">Soda</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="category-ph">
+            <div class="d-flex align-items-center category-scroll-container">
+                <a href="online-order.html" class="category-link active">
+                    <button class="btn">All</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Appetizer</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Drinks</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Soda</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Appetizer</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Drinks</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Soda</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Appetizer</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Drinks</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Soda</button>
+                </a>
+            </div>
+        </div>
+        <div class="row menu-product-card mb-5">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <a href="" class="text-decoration-none text-black">
+                    <div class="card pb-0">
+                        <div class="p-2">
+                            <img src="image/cheeseburger-thumb.png" class="w-100" alt="">
+                        </div>
+                        <div class="card-body pt-2 pb-3">
+                            <h6 class="text-center">Cheese Burger</h6>
+                            <div class="d-flex align-items-center justify-content-between flex-wrap mt-3">
+                                <span>5,000 MMK</span>
+                                <a href="" class="btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <a href="" class="text-decoration-none text-black">
+                    <div class="card pb-0">
+                        <div class="p-2">
+                            <img src="image/cappuccino-thumb.png" class="w-100" alt="">
+                        </div>
+                        <div class="card-body pt-2 pb-3">
+                            <h6 class="text-center">Cappuccino</h6>
+                            <div class="d-flex align-items-center justify-content-between flex-wrap mt-3">
+                                <span class="">4,000 MMK</span>
+                                <a href="" class="btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <a href="" class="text-decoration-none text-black">
+                    <div class="card pb-0">
+                        <div class="p-2">
+                            <img src="image/fried_cheese_wonton-thumb.png" class="w-100" alt="">
+                        </div>
+                        <div class="card-body pt-2 pb-3">
+                            <h6 class="text-center">Fried</h6>
+                            <div class="d-flex align-items-center justify-content-between flex-wrap mt-3">
+                                <span class="">5,000 MMK</span>
+                                <a href="" class="btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <a href="" class="text-decoration-none text-black">
+                    <div class="card pb-0">
+                        <div class="p-2">
+                            <img src="image/cheeseburger-thumb.png" class="w-100" alt="">
+                        </div>
+                        <div class="card-body pt-2 pb-3">
+                            <h6 class="text-center">Cheese Burger</h6>
+                            <div class="d-flex align-items-center justify-content-between flex-wrap mt-3">
+                                <span class="">5,000 MMK</span>
+                                <a href="" class="btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <a href="" class="text-decoration-none text-black">
+                    <div class="card pb-0">
+                        <div class="p-2">
+                            <img src="image/cappuccino-thumb.png" class="w-100" alt="">
+                        </div>
+                        <div class="card-body pt-2 pb-3">
+                            <h6 class="text-center">Cappuccino</h6>
+                            <div class="d-flex align-items-center justify-content-between flex-wrap mt-3">
+                                <span class="">4,000 MMK</span>
+                                <a href="" class="btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <a href="" class="text-decoration-none text-black">
+                    <div class="card pb-0">
+                        <div class="p-2">
+                            <img src="image/fried_cheese_wonton-thumb.png" class="w-100" alt="">
+                        </div>
+                        <div class="card-body pt-2 pb-3">
+                            <h6 class="text-center">Fried ff gdtetefd gyrtryry jhjhou jjoij</h6>
+                            <div class="d-flex align-items-center justify-content-between flex-wrap mt-3">
+                                <span class="">5,000 MMK</span>
+                                <a href="" class="btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--online menu end  -->
+
+
+        <!-- view item start  -->
+        <!-- <div class="add-new">
+            <p class="d-flex align-items-center">
+                <a href="" class="text-decoration-none online-arrow-left">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a> 
+                <label for="" class="ms-2">Details</label>
+            </p>
+            <div>
+                <div class="row form-group">
+                    <div class="col-lg-5 col-md-5 mb-4">
+                        <div>
+                            <img src="image/cappuccino-thumb.png" alt="" class="w-75 d-block mx-auto rounded">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 mb-1">
+                        <div class="mb-3">
+                            <h2>Cappuccino</h2>
+                            <label for="">Drinks</label>
+                            <h6 class="my-3">4,000 MMK</h6>
+                            <p class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque alias est, id nisi quos provident expedita possimus aliquam vitae molestiae nihil, non eius facere quae officiis. Possimus dolore laboriosam fugiat.</p>
+                        </div>
+                        <div>
+                            <span for="" class="me-3">Qty : </span>
+                            <div id="order-count-btn">
+                                <button class="minus" aria-label="Decrease"><i class="fa fa-minus"></i></button>
+                                <input type="text" class="order-input-box" value="3">
+                                <button class="plus" aria-label="Increase"><i class="fa fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <a href="" class="text-decoration-none">
+                            <button class="w-100 online-addtocart">Add to cart</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>  -->
+        <!-- view item end  -->
+
+
+        <!-- view cart start  -->
+        <!-- <div class="add-new">
+            <p class="d-flex align-items-center">
+                <a href="" class="text-decoration-none online-arrow-left">
+                    <i class="fa-solid fa-arrow-left"></i> 
+                </a> 
+                <label for="" class="ms-2">My Cart ( 2 )</label>
+            </p>
+            <div class="row mt-4 carts-container bg-transparent shadow-none border-0 p-0">
+                <div class="col-lg-8 col-md-7 mb-3">
+                    <div class="cart-content-ph">
+                        <div class="d-flex align-content-center position-absolute">
+                            <button class="btn-sm btn-remove remove"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                        <div class="d-flex align-items-center flex-wrap gap-2">
+                            <div class="d-flex align-items-center me-5 cart-detail-content">
+                                <img src="image/cheeseburger-thumb.png" class="d-block" alt="">
+                                <div class="ms-3">
+                                    <h6>Cheese Burger</h6>
+                                    <label for="">10,000 MMK</label>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div id="order-count-btn">
+                                    <button class="minus" aria-label="Decrease"><i class="fa fa-minus"></i></button>
+                                    <input type="text" class="order-input-box" value="1">
+                                    <button class="plus" aria-label="Increase"><i class="fa fa-plus"></i></button>
+                                </div>
+                                <div class="ms-5">
+                                    <label for="" class="fw-semibold">10,000 MMK</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-content-ph">
+                        <div class="d-flex align-content-center position-absolute">
+                            <button class="btn-sm btn-remove remove"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                        <div class="d-flex align-items-center flex-wrap gap-2">
+                            <div class="d-flex align-items-center me-5 cart-detail-content">
+                                <img src="image/french-fries.webp" class="d-block" alt="">
+                                <div class="ms-3">
+                                    <h6>French Fries</h6>
+                                    <label for="">5,000 MMK</label>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div id="order-count-btn">
+                                    <button class="minus" aria-label="Decrease"><i class="fa fa-minus"></i></button>
+                                    <input type="text" class="order-input-box" value="3">
+                                    <button class="plus" aria-label="Increase"><i class="fa fa-plus"></i></button>
+                                </div>
+                                <div class="ms-5">
+                                    <label for="" class="fw-semibold">15,000 MMK</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mx-auto text-secondary my-5">
+                        <i class="fa-regular fa-face-frown-open fs-4"></i>
+                        <p class="mt-2">Oops! Nothing in Your Cart Yet</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <div id="summary">
+                        <h6 class="text-uppercase text-center">Summary</h6>
+                        <div class="mt-4 px-3">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <label for="">Subtotal</label>
+                                <label>25,000 MMK</label>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <label for="">Delivery</label>
+                                <label>3,500 MMK</label>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between border-top mt-4 pt-3">
+                                <label for="">Total</label>
+                                <label class="fw-bold">28,500 MMK</label>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between gap-1 px-3 pb-4">
+                            <a href="javascript:void(0);" class="text-decoration-none w-100">
+                                <button class="w-100 clear-cart">Clear Cart</button>
+                            </a>
+                            <a href="javascript:void(0);" class="text-decoration-none w-100">
+                                <button class="w-100 check-out">CheckOut</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- view cart end  -->
+
+
+        <!-- contact us start  -->
+        <!-- <div class="add-new">
+            <p class="d-flex align-items-center">
+                <a href="" class="text-decoration-none online-arrow-left">
+                    <i class="fa-solid fa-arrow-left"></i> 
+                </a> 
+            </p>
+            <h5 class="text-center">Contact Us</h5>
+            <div class="mt-4 bg-transparent shadow-none border-0 p-0">
+                <div class="on-contact-content">
+                    <div class="text-center mb-3">
+                        <i class="fa-solid fa-phone mb-2"></i> 
+                        <p>09-123456789</p>
+                    </div>
+                    <div class="text-center mb-3">
+                        <i class="fa-solid fa-location-dot mb-2"></i>
+                        <p>No-123, South Dagon Township, Yangon</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- contact us end  -->
+
+
+        <!-- check out start  -->
+        <!-- <div class="add-new">
+            <p class="d-flex align-items-center">
+                <a href="" class="text-decoration-none online-arrow-left">
+                    <i class="fa-solid fa-arrow-left"></i> 
+                </a> 
+                <label for="" class="ms-2">Check Out</label>
+            </p>
+            <div class="row bg-transparent shadow-none border-0 p-0 cusinfo-container">
+                <div class="col-md-5 order-md-1 mb-5">
+                    <div id="order-details">
+                        <h6 class="text-uppercase text-center">Order Details</h6>
+                        <div>
+                            <ul class="pt-2">
+                                <li>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span>1x Cheese Burger</span>
+                                        <span class="pe-3">5,000</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span>3x Fish Fried</span>
+                                        <span class="pe-3">15,000</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span>4x Cappuccino</span>
+                                        <span class="pe-3">20,000</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="border-top pt-1 px-3">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <label for="">Subtotal</label>
+                                    <label>40,000</label>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <label for="">Delivery</label>
+                                    <label>3,500</label>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between border-top pt-1 pb-3">
+                                    <label for="">Total(MMK)</label>
+                                    <label class="fw-bold">43,500</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 mb-5">
+                    <p>Please fill out the following information.</p>
+
+                    <form action="" method="POST" class="update-btn-group" id="cus-information">
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3">
+                                <label class="mb-1">Name</label>
+                                <input id="" type="text" class="form-control" name="name" placeholder="Enter name">
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label class="mb-1">Phone</label>
+                                <input id="" type="number" class="form-control" name="name" placeholder="Enter phone number">
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="mb-1">Address</label>
+                            <textarea name="" id="" class="form-control" rows="3" placeholder="Enter address"></textarea>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="" class="mb-1">Payment Method</label>
+                            <div class="d-flex align-items-center">
+                                <select id="paymentMethod" class="form-control">
+                                    <option value="cod">Cash On Delivery</option>
+                                    <option value="kpay" data-target="kpay-info">K Pay</option>
+                                    <option value="wavepay" data-target="wavepay-info">Wave Pay</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down" id="method-drop-icon2"></i>
+                            </div>
+                        </div>
+                        <div class="form-group row payment-info" id="kpay-info">
+                            <div class="col-sm-6 mb-4">
+                                <div id="pay-info-content">
+                                    <label for="" class="mb-3">Payment Information</label>
+                                    <p>Name : K Pay</p>
+                                    <p>Phone: 09123456789</p>
+                                    <img src="image/qr.svg" alt="" class="w-50 d-block mx-auto">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label for="" class="mb-1">Screenshot of your payment</label>
+                                <div class="d-flex align-items-center">
+                                    <img src="image/default.jpg" id="screenshot-output" class="w-50 d-block me-3" alt="">
+                                    <label for="file" class="screenshot-upload">
+                                        <span><i class="fa-solid fa-camera"></i></span>
+                                        <span>Upload</span>
+                                    </label>
+                                </div>
+                                <input type="file" id="file" name="image" class="d-none" onchange="loadFile(event);">
+                            </div>
+                        </div>
+                        <div class="form-group row payment-info" id="wavepay-info">
+                            <div class="col-sm-6 mb-4">
+                                <div id="pay-info-content">
+                                    <label for="" class="mb-3">Payment Information</label>
+                                    <p>Name : Wave Pay</p>
+                                    <p>Phone: 09123456789</p>
+                                    <img src="image/qr.svg" alt="" class="w-50 d-block mx-auto">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label for="" class="mb-1">Screenshot of your payment</label>
+                                <div class="d-flex align-items-center">
+                                    <img src="image/default.jpg" id="screenshot-output" class="w-50 d-block me-3" alt="">
+                                    <label for="file" class="screenshot-upload">
+                                        <span><i class="fa-solid fa-camera"></i></span>
+                                        <span>Upload</span>
+                                    </label>
+                                </div>
+                                <input type="file" id="file" name="image" class="d-none" onchange="loadFile(event);">
+                            </div>
+                        </div>
+                        <div class="form-group mt-4 mb-3">
+                            <label for="" class="mb-1">Customer Note</label>
+                            <textarea name="" id="" class="form-control" rows="3" placeholder="Skip this field if it doesn't apply to your situation."></textarea>
+                        </div>
+
+                        <button class="btn w-100 border-0 update-btn mt-2">Place Order</button>
+                    </form>
+                </div>
+            </div>
+        </div> -->
+        <!-- check out end  -->
+
+
+        <!-- alert design start  -->
+        <!-- <div class="mb-5 pb-5">
+            <div class="row mx-auto px-3">
+                <div class="col-lg-4 mb-5">
+                    <div class="alert-box-container">
+                        <i class="fa-solid fa-check success"></i>
+                        <p class="mt-1">Success!</p>
+                        <p>Delivery has been confirmed successfully.</p>
+                        <a href="">
+                            <button class="success">Okay</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="alert-box-container">
+                        <i class="fa-solid fa-xmark cross"></i>
+                        <p class="mt-1">Failed!</p>
+                        <p>Something went wrong. Please try again.</p>
+                        <a href="">
+                            <button class="cross">Try Again</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="alert-box-container">
+                        <div class="custom-loader"></div>
+                        <p class="mt-1">Please wait</p>
+                        <p>System is waiting delivery confirmation from customer.</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- alert design end  -->
+         
+
+        <!-- replace alert design here
+        <div class="modal-overlay">
+            <div class="alert-box-container">
+                <i class="fa-solid fa-check success"></i>
+                <p class="mt-1">Success!</p>
+                <p>Delivery has been confirmed successfully.</p>
+                <a href="">
+                    <button class="success">Okay</button>
+                </a>
+            </div>
+        </div>
+
+        <script>
+            // disable scroll to body 
+            document.querySelector('.modal-overlay').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
+            document.querySelector('.success').addEventListener('click', function () {
+                document.querySelector('.modal-overlay').style.display = 'none';
+                document.body.style.overflow = '';
+            });
+        </script> -->
+
+        <!-- footer start  -->
+        <section>
+            <div class="online-footer-bar">
+                <label>
+                    ©
+                    2025 Nanobots Store. All rights reserved.
+                </label>
+            </div>
+        </section>
+        <!-- footer end  -->
+
+   <!-- payment info show  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const paymentMethodSelect = document.getElementById('paymentMethod');
+            const paymentInfoSections = document.querySelectorAll('.payment-info');
+
+            function togglePaymentInfo() {
+                const selectedOption = paymentMethodSelect.options[paymentMethodSelect.selectedIndex];
+                const targetId = selectedOption.getAttribute('data-target');
+
+                paymentInfoSections.forEach(section => {
+                    section.style.display = 'none';
+                });
+
+                if (targetId) {
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.style.display = 'flex';
+                    }
+                }
+            }
+
+            paymentMethodSelect.addEventListener('change', togglePaymentInfo);
+            togglePaymentInfo();
+        });
+    </script>
+
+
+    <!-- updatebtn disabled check -->
+    <script>
+        document.querySelectorAll('.update-btn-group').forEach(form => {
+            const inputs = form.querySelectorAll('input,textarea');
+            const updateBtn = form.querySelector('.update-btn');
+            const initialValues = {};
+
+            inputs.forEach(input => {
+                initialValues[input.name] = input.value;
+            });
+
+            function checkUpdateValueForBtn() {
+                let hasChanged = false;
+                inputs.forEach(input => {
+                    if (input.value !== initialValues[input.name]) {
+                        hasChanged = true;
+                    }
+                });
+                updateBtn.disabled = !hasChanged;
+            }
+
+            inputs.forEach(input => {
+                input.addEventListener('input', checkUpdateValueForBtn);
+                input.addEventListener('change', checkUpdateValueForBtn);
+            });
+
+            checkUpdateValueForBtn();
+        });
+    </script>
+
+</body>
+
+    <!-- js bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <script src="jquery-3.7.1.js"></script>
+
+    <!-- Flatpickr JS -->
+    <script src="flatpickr/flatpickr.min.js"></script>
+
+    <!-- js  -->
+    <script src="script.js"></script>
+</html>

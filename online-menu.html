@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Menu</title>
+
+    <!-- css bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- font-awesome  -->
+    <link rel="stylesheet" href="font-awesome/css/all.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- editor  -->
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/42.0.2/ckeditor5.css" />
+
+    <script type="importmap">
+        {
+            "imports": {
+                "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/42.0.2/ckeditor5.js",
+                "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/42.0.2/"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- nav start  -->
+    <nav class="navbar navbar-expand-md sticky-top shadow-sm" id="nav">
+        <div class="container-fluid">
+            <a href="#" class="d-flex align-items-center text-decoration-none">
+                <img src="image/photo_2025-02-03_22-42-06.jpg" alt="" id="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="bg-transparent border-0 w-100 text-end" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav m-auto" id="nav-order">
+                        <li class="nav-item">
+                            <a class="nav-link" href="online-menu.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="" id="nav-profile">
+                        <a href="profile.html" class="btn border-0" id="online-profile">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end  -->
+
+
+    <!--online menu start  -->
+    <section class="container-fluid mt-3">
+        <div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
+            <div>
+                <form action="" id="search-table">
+                    <div class="group">
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                        <input placeholder="What are you looking for?" name="search_key" value="" type="search" class="input">
+                    </div>
+                </form>
+            </div>
+            <div class="dropdown py-2 online-btns-web">
+                <button class="dropdown-toggle px-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    All
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="">All</a></li>
+                    <li><a class="dropdown-item" href="">Appetizer</a></li>
+                    <li><a class="dropdown-item" href="">Sweets</a></li>
+                    <li><a class="dropdown-item" href="">Soda</a></li>
+                    <li><a class="dropdown-item" href="">All</a></li>
+                    <li><a class="dropdown-item" href="">Appetizer</a></li>
+                    <li><a class="dropdown-item" href="">Sweets</a></li>
+                    <li><a class="dropdown-item" href="">Soda</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="category-ph">
+            <div class="d-flex align-items-center category-scroll-container">
+                <a href="online-menu.html" class="category-link active">
+                    <button class="btn">All</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Appetizer</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Drinks</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Soda</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Appetizer</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Drinks</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Soda</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Appetizer</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Drinks</button>
+                </a>
+                <a href="#" class="category-link">
+                    <button class="btn">Soda</button>
+                </a>
+            </div>
+        </div>
+        <div class="row menu-product-card mb-5">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card pb-0">
+                    <div class="p-2">
+                        <img src="image/cheeseburger-thumb.png" class="w-100" alt="">
+                    </div>
+                    <div class="card-body pt-2 pb-3">
+                        <h6 class="text-center">Cheese Burger</h6>
+                        <div class="d-flex align-items-center justify-content-between flex-wrap mt-3">
+                            <span class="">5,000 MMK</span>
+                            <a href="" class="btn">Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card pb-0">
+                    <div class="p-2">
+                        <img src="image/cappuccino-thumb.png" class="w-100" alt="">
+                    </div>
+                    <div class="card-body pt-2 pb-3">
+                        <h6 class="text-center">Cappuccino</h6>
+                        <div class="d-flex align-items-center justify-content-between flex-wrap mt-3">
+                            <span class="">4,000 MMK</span>
+                            <a href="" class="btn">Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card pb-0">
+                    <div class="p-2">
+                        <img src="image/fried_cheese_wonton-thumb.png" class="w-100" alt="">
+                    </div>
+                    <div class="card-body pt-2 pb-3">
+                        <h6 class="text-center">Fried</h6>
+                        <div class="d-flex align-items-center justify-content-between flex-wrap mt-3">
+                            <span class="">5,000 MMK</span>
+                            <a href="" class="btn">Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card pb-0">
+                    <div class="p-2">
+                        <img src="image/cheeseburger-thumb.png" class="w-100" alt="">
+                    </div>
+                    <div class="card-body pt-2 pb-3">
+                        <h6 class="text-center">Cheese Burger</h6>
+                        <div class="d-flex align-items-center justify-content-between flex-wrap mt-3">
+                            <span class="">5,000 MMK</span>
+                            <a href="" class="btn">Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card pb-0">
+                    <div class="p-2">
+                        <img src="image/cappuccino-thumb.png" class="w-100" alt="">
+                    </div>
+                    <div class="card-body pt-2 pb-3">
+                        <h6 class="text-center">Cappuccino</h6>
+                        <div class="d-flex align-items-center justify-content-between flex-wrap mt-3">
+                            <span class="">4,000 MMK</span>
+                            <a href="" class="btn">Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card pb-0">
+                    <div class="p-2">
+                        <img src="image/fried_cheese_wonton-thumb.png" class="w-100" alt="">
+                    </div>
+                    <div class="card-body pt-2 pb-3">
+                        <h6 class="text-center">Fried ff gdtetefd gyrtryry jhjhou jjoij</h6>
+                        <div class="d-flex align-items-center justify-content-between flex-wrap mt-3">
+                            <span class="">5,000 MMK</span>
+                            <a href="" class="btn">Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--online menu end  -->
+
+
+    <!-- view item start  -->
+    <section class="container-fluid mt-3 mb-5 px-3">
+        <div id="menu-details">
+            <p>
+                <a href="item.html" class="text-decoration-none">Menu</a> > 
+                <span>Detail View</span>
+            </p>
+            <div>
+                <div class="row form-group">
+                    <div class="col-lg-5 col-md-5 mb-4">
+                        <div>
+                            <img src="image/cappuccino-thumb.png" alt="" class="w-75 d-block mx-auto rounded">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 mb-1">
+                        <div class="mb-3">
+                            <h2>Cappuccino</h2>
+                            <label for="">Drinks</label>
+                            <h6 class="my-3">4,000 MMK</h6>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque alias est, id nisi quos provident expedita possimus aliquam vitae molestiae nihil, non eius facere quae officiis. Possimus dolore laboriosam fugiat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <!-- view item end  -->
+
+
+    <!-- footer start  -->
+    <section class="d-flex justify-content-between online-contact-bar flex-wrap gap-5">
+        <div class="order-sm-1 pe-sm-5">
+            <h6 class="mb-3">Call to Order : </h6>
+            <div class="mb-3">
+                <i class="fa-solid fa-phone me-2" style="color:#00ddff;"></i> 
+                <span>0912345678</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-location-dot me-2" style="color:#00ddff;"></i>
+                <span>No-123, South Dagon Township, Yangon</span>
+            </div>
+        </div>
+        <div style="font-size: 11pt;">
+            <label>
+                ©
+                2025 Nanobots Store. All rights reserved.
+            </label>
+        </div>
+    </section>
+    <!-- footer end  -->
+
+</body>
+
+
+    <!-- js bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <script src="jquery-3.7.1.js"></script>
+
+    <!-- js  -->
+    <script src="script.js"></script>
+</html>
