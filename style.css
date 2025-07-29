@@ -625,6 +625,9 @@ html{
 
 
 /*...................................... view item start .......................... */
+#menu-details{
+    margin-bottom: 100px;
+}
 #menu-details > div{
     margin-top: 15px;
     padding: 20px;
@@ -635,5 +638,13 @@ html{
 }
 #menu-details > div label{
     color: var(--border);
+}
+@media screen and (max-width: 576px){
+    #menu-details > div h2{
+        font-size: 15pt;
+    }
+    #menu-details > div p{
+        font-size: 11pt;
+    }
 }
 /*...................................... view item end .......................... */
