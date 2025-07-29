@@ -272,6 +272,9 @@ html{
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
+    .menu-product-card > div{
+        padding: 5px 8px;
+    }
     .menu-product-card .card img{
         display: block;
         margin: auto;
@@ -294,6 +297,7 @@ html{
         line-clamp: 1;
         height: 30px;
         font-weight: 600;
+        margin-top: 0;
     }
     .menu-product-card .card-body span{
         display: block;
@@ -315,7 +319,7 @@ html{
     color: var(--black) !important;
     text-decoration: none;
     border: 1px solid var(--gray-border);
-    /* padding-top: 2px; */
+    padding-top: 2px;
 }
 #category-ph a button{
     border: none;
