@@ -660,7 +660,7 @@ textarea{
 .alert-box-container p:nth-child(3){
     font-size: 9pt;
     color: var(--border);
-    height: 40px;
+    height: 35px;
 }
 .alert-box-container button{
     width: 100%;
