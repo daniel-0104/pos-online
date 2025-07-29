@@ -68,10 +68,10 @@ html{
     box-shadow: none;
 }
 #nav-profile a > span,
-#history-mobile{
+#cart-mobile{
     display: none;
 }
-.history-btn{
+.cart-btn{
     background-color: var(--white);
     font-size: 11pt;
     border: 1px solid var(--gray-border);
@@ -79,13 +79,16 @@ html{
     padding: 8px 12px 7px;
     border-radius: 5px;
 }
+#nav .offcanvas .nav-brand{
+    display: none;
+}
 @media screen and (max-width: 767px){
     .navbar-nav li{
         padding: 8px 0;
     }
     #nav-order > li > a{
         font-size: 11pt;
-        padding: 3px 20px;
+        padding: 5px;
     }
     #logo-img{
         width: 90px;
@@ -95,32 +98,35 @@ html{
     }
     #nav .offcanvas > .offcanvas-body{
         display: block;
-        margin-top: -10px;
         padding-top: 0;
     }
-    #nav-profile{
-        margin-top: 15px;
-        padding-top: 15px;
-        padding-left: 15px;
-        border-top: 1px solid var(--gray-border);
+    #nav .offcanvas .nav-brand{
+        display: inline-block;
+        font-size: 10pt;
     }
     #nav-profile a > span{
         display: inline-block;
-        margin-left: 10px;
+        margin-left: 8px;
     }
-    #history-lap,
+    #cart-lap,
     #nav > div > a{
         display: none;
     }
-    #history-mobile{
+    #cart-mobile{
         display: inline-block;
     }
-    .history-btn{
+    .cart-btn{
         font-size: 10pt;
         padding: 8px 11px 7px;
     }
     #online-profile{
-        font-size: 11pt;
+        width: 100%;
+        font-size: 10pt;
+        margin-top: 25px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid var(--gray-border);
+        background-color: var(--gray);
     }
 }
 /*........................................... nav end.................................. */
@@ -201,7 +207,7 @@ html{
 
 
 
-.online-cartlist{
+/* .online-cartlist{
     background-color: var(--transparent-color) !important;
     font-size: 11pt !important;
     border: 1px solid var(--dark-gray) !important;
@@ -216,7 +222,7 @@ html{
     object-fit: cover;
     box-shadow: rgba(140, 140, 140, 0.123) 0px 2px 8px 0px;
     margin-left: -6px;
-}
+} */
 
 .product-card .card,
 .menu-product-card .card{
