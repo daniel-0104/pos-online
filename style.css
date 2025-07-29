@@ -458,7 +458,7 @@ html{
 }
 .cart-detail-content label{
     font-size: 11pt;
-    color: var(--kot-text);
+    color: var(--border);
 }
 .cart-content-ph{
     position: relative;
