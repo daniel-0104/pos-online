@@ -104,6 +104,7 @@ html{
     #nav .offcanvas > .offcanvas-body{
         display: block;
         padding-top: 0;
+        margin-top: 15px;
     }
     #nav .offcanvas .nav-brand{
         display: inline-block;
@@ -114,7 +115,7 @@ html{
         margin-left: 8px;
     }
     #cart-lap,
-    #nav > div > a{
+    .nav-img{
         display: none;
     }
     #cart-mobile{
@@ -374,7 +375,10 @@ html{
 }
 /*......................................... online menu end .......................... */
 
-
+/*........................................ view cart start ............................. */
+#cart-details{
+    margin-bottom: 100px;
+}
 .online-arrow-left{
     display: flex;
     align-items: center;
@@ -438,6 +442,8 @@ html{
     border: 1px solid transparent;
     padding: 6px;
 }
+/*........................................ view cart end ............................. */
+
 
 .cart-content-ph{
     margin-bottom: 18px;
