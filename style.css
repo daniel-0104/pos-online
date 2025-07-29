@@ -376,8 +376,9 @@ html{
 /*......................................... online menu end .......................... */
 
 /*........................................ view cart start ............................. */
-#cart-details{
-    margin-bottom: 100px;
+#cart-details,
+#check-out-details{
+    margin-bottom: 130px;
 }
 .online-arrow-left{
     display: flex;
@@ -442,9 +443,6 @@ html{
     border: 1px solid transparent;
     padding: 6px;
 }
-/*........................................ view cart end ............................. */
-
-
 .cart-content-ph{
     margin-bottom: 18px;
 }
@@ -488,12 +486,13 @@ html{
     box-shadow: rgba(140, 140, 140, 0.123) 0px 2px 8px 0px;
     border: 1px solid var(--gray-border);
 }
-.carts-container #summary > h6{
+/* .carts-container #summary > h6{
     background-color: var(--transparent-color);
     padding: 10px;
     border-bottom: 1px solid var(--gray-border);
-}
-.cusinfo-container #order-details > h6{
+} */
+.cusinfo-container #order-details > h6,
+.carts-container #summary > h6{
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     color: white;
@@ -501,7 +500,6 @@ html{
     padding: 10px;
     border-bottom: 1px solid var(--gray-border);
 }
-
 .on-contact-content{
     display: flex;
     align-items: center;
@@ -517,6 +515,60 @@ html{
     border-radius: 3px;
     box-shadow: rgba(140, 140, 140, 0.123) 0px 2px 8px 0px;
 }
+.form-control{
+    background-color: transparent;
+    color: var(--black);
+    border: 1px solid var(--gray-border);
+}
+input.form-control:focus,
+textarea.form-control:focus{
+    outline: 0;
+    border: 1px solid var(--green);
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--black);
+}
+select.form-control{
+    font-size: 11pt;
+    cursor: pointer;
+}
+select.form-control:focus{
+    box-shadow: none;
+    outline: 0;
+    border: 1px solid var(--gray-border);
+}
+#method-drop-icon{
+    color: var(--black);
+    font-size: 8pt;
+    margin-top: 4px;
+    margin-left: -20px;
+}
+form textarea,
+textarea{
+    resize: none;
+}
+.form-control::placeholder{
+    font-size: 10pt;
+    color: rgb(151, 151, 151);
+}
+#screenshot-output{
+    background-color: var(--white);
+    display: block;
+    height: 160px;
+    object-fit: contain;
+}
+.screenshot-upload{
+    background-color: var(--white);
+    border: 1px solid var(--gray-border);
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#cus-information > button{
+    background-color: var(--green);    
+    color: var(--white);
+}
+/*........................................ view cart end ............................. */
 
 
 .order-history-content > div:first-child{
@@ -643,7 +695,7 @@ html{
 
 /*...................................... view item start .......................... */
 #menu-details{
-    margin-bottom: 100px;
+    margin-bottom: 130px;
 }
 #menu-details > div{
     margin-top: 15px;

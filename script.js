@@ -11,10 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-// href clicked active link end
 
 
-//....................................... ......category active link start .........................................
+// category active link start
 document.addEventListener('DOMContentLoaded', function () {
   const categoryPh = document.querySelector('.category-scroll-container');
   const categoryLinks = document.querySelectorAll('.category-link');
@@ -53,7 +52,64 @@ document.addEventListener('DOMContentLoaded', function () {
       categoryPh.scrollLeft = parseInt(categoryScrollX, 10);
   }
 });
-//................................................category active link end..... .........................................
 
 
+// payment info show 
+document.addEventListener('DOMContentLoaded', function () {
+    const paymentMethodSelect = document.getElementById('paymentMethod');
+    const paymentInfoSections = document.querySelectorAll('.payment-info');
 
+    function togglePaymentInfo() {
+        const selectedOption = paymentMethodSelect.options[paymentMethodSelect.selectedIndex];
+        const targetId = selectedOption.getAttribute('data-target');
+
+        paymentInfoSections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        if (targetId) {
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.style.display = 'flex';
+            }
+        }
+    }
+
+    paymentMethodSelect.addEventListener('change', togglePaymentInfo);
+    togglePaymentInfo();
+});
+
+
+// updatebtn disabled check
+document.querySelectorAll('.update-btn-group').forEach(form => {
+    const inputs = form.querySelectorAll('input,textarea');
+    const updateBtn = form.querySelector('.update-btn');
+    const initialValues = {};
+
+    inputs.forEach(input => {
+        initialValues[input.name] = input.value;
+    });
+
+    function checkUpdateValueForBtn() {
+        let hasChanged = false;
+        inputs.forEach(input => {
+            if (input.value !== initialValues[input.name]) {
+                hasChanged = true;
+            }
+        });
+        updateBtn.disabled = !hasChanged;
+    }
+
+    inputs.forEach(input => {
+        input.addEventListener('input', checkUpdateValueForBtn);
+        input.addEventListener('change', checkUpdateValueForBtn);
+    });
+
+    checkUpdateValueForBtn();
+});
+
+
+var loadFile = function (event) {
+  var image = document.getElementById("screenshot-output");
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
