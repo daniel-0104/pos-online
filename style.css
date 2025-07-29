@@ -358,6 +358,7 @@ html{
 #cart-details,
 #check-out-details,
 #order-history,
+#order-check,
 #contact{
     margin-bottom: 130px;
 }
@@ -532,6 +533,12 @@ textarea{
     font-size: 10pt;
     color: rgb(151, 151, 151);
 }
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-text-fill-color: var(--black) !important;
+    background-color: transparent !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
 #screenshot-output{
     background-color: var(--white);
     display: block;
@@ -545,7 +552,8 @@ textarea{
     cursor: pointer;
     border-radius: 5px;
 }
-#cus-information > button{
+#cus-information > button,
+#order-check button{
     background-color: var(--green);    
     color: var(--white);
 }
@@ -685,7 +693,8 @@ textarea{
 #menu-details{
     margin-bottom: 130px;
 }
-#menu-details > div{
+#menu-details > div,
+#order-check .order-check-content{
     margin-top: 15px;
     padding: 20px;
     background-color: var(--white);
@@ -700,7 +709,8 @@ textarea{
     #menu-details > div h2{
         font-size: 15pt;
     }
-    #menu-details > div p{
+    #menu-details > div p,
+    #order-check label{
         font-size: 11pt;
     }
 }
