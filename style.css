@@ -568,6 +568,15 @@ textarea{
     background-color: var(--green);    
     color: var(--white);
 }
+@media screen and (max-width: 576px){
+    .cart-content-ph img{
+        width: 60px;
+        height: 60px;
+    }
+    .cart-detail-content{
+        width: 100%;
+    }
+}
 /*........................................ view cart end ............................. */
 
 
